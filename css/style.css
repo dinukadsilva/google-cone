@@ -16,7 +16,7 @@ body{
     clear: both;
 }
 
-/* Main Header */
+/* Navigation Header */
 
 header{
     display: flex;
@@ -48,6 +48,7 @@ header> a{
     display: flex;
     width: 40px;
     height: 40px;
+    margin: 4px;
     border-radius: 100%;
     cursor: pointer;
     justify-content: center;
@@ -73,7 +74,9 @@ header> a{
     border: 1px solid transparent;
     border-radius: 4px;
     padding: 9px 23px;
-    margin: 0 8px 0 12px;
+    margin: 0 12px 0 8px;
+    text-align: center;
+    /* letter-spacing: 25px; */
 }
 
 #signin:hover{
@@ -90,4 +93,138 @@ header> a{
 #signin:active{
     background-color: #1b63c1;
     box-shadow: 0 1px 3px 1px rgb(66 64 67 / 15%), 0 1px 2px 0 rgb(60 64 67 / 30%);
-    }
+    
+}
+
+/* Main Header */
+
+/* #main{
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    width: 160px;
+} */
+/* #main search-bar{
+    border: 8px;
+} */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    display: flex;
+
+    height: calc(100vh - 560px);
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+#logo img{
+    align-items: center;
+}
+
+#second-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 120px;
+    width: 100;
+    padding: 20px;
+}
+
+#search-bar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 44px;
+    width: 582px;
+
+    border: 1px solid #2021247e;
+    border-radius: 9999px;
+}
+
+#search-bar > svg{
+    width: 24px;
+    height: 24px;
+}
+
+#search-bar>.input{
+    width: 483px;
+    height: 34px;
+    border: transparent;
+}
+
+#search-bar :first-child{
+    width: 44px;
+    height: 33px;
+    padding: -5px, 13px, 0, 0;
+}
+
+#search-bar :last-child{
+    width: 40px;
+    height: 44px;
+    padding: 0 8px;
+}
+
+#sec-buttons{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 18px;
+    height: 44px;
+    width: 582px;
+
+ 
+    /* border: 1px solid yellow; */
+}
+
+#sec-buttons button{
+    margin: 11px 4px;
+    padding: 0 15px;
+    line-height: 27px;
+    font-size: 14px;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    min-width: 54px;
+    cursor: pointer;
+    user-select: none;
+    height: 36px;
+    border-radius: 4px;
+}
+
+/* #sec-buttons :first-child{
+    height: 36px;
+    width: 128px;
+}
+
+#sec-buttons :last-child{
+    height: 36px;
+    width: 142px;
+} */
+
+#sec-buttons button:hover{
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+
+#sec-buttons button:focus{
+    border: 1px solid #4285f4;
+    outline: none;
+}
+
+#sec-language{
+    font-size: 13px;
+}
+
+#sec-language a{
+    padding: 0 3px;
+}
