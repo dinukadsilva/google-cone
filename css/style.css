@@ -1,24 +1,24 @@
 @import url(reset.css);
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
-.clearfix{
+
+.clearfix {
     clear: both;
 }
-.clearfix::after{
+
+.clearfix::after {
     display: block;
     content: "";
     clear: both;
 }
 
-/* Navigation Header */
-
-header{
+header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -26,25 +26,22 @@ header{
     height: 60px;
 }
 
-a{
+a {
     text-decoration: none;
-
 }
 
 a:hover{
     text-decoration: underline;
-
 }
 
-header> a{
+header > a {
     display: block;
     color: rgba(0,0,0,.87);
     font-size: 13px;
     line-height: 24px;
-
 }
 
-#apps{
+#apps {
     display: flex;
     width: 40px;
     height: 40px;
@@ -54,59 +51,51 @@ header> a{
     justify-content: center;
     align-items: center;
 }
-#apps:hover{
-    background-color: rgba(60,64,67,0.08);
+
+#apps:hover {
+    background-color: rgba(60, 64, 67, 0.08);
 }
-#apps > svg{
+
+#apps > svg {
     width: 24px;
     height: 24px;
     fill: #5f6368;
 }
-#images{
+
+#images {
     padding: 0 15px;
 }
-#signin{
+
+#sign-in {
     font-size: 14px;
     line-height: 1rem;
     font-weight: 500;
     color: white;
-    background-color: rgba(26,115,232);
+    background-color: rgb(26, 115, 232);
     border: 1px solid transparent;
     border-radius: 4px;
     padding: 9px 23px;
     margin: 0 12px 0 8px;
+    min-width: 96px;
     text-align: center;
-    /* letter-spacing: 25px; */
+    letter-spacing: .25px;
 }
 
-#signin:hover{
+#sign-in:hover{
     text-decoration: none;
     background-color: #1b66c9;
     box-shadow:  0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);
 }
 
-#signin:focus{
+#sign-in:focus{
     background-color: #1c5fba;
     box-shadow:  0 1px 3px 1px rgb(66 64 67 / 15%), 0 1px 2px 0 rgb(60 64 67 / 30%);
 }
 
-#signin:active{
+#sign-in:active{
     background-color: #1b63c1;
     box-shadow: 0 1px 3px 1px rgb(66 64 67 / 15%), 0 1px 2px 0 rgb(60 64 67 / 30%);
-    
 }
-
-/* Main Header */
-
-/* #main{
-    display: flex;
-    justify-content: center;
-    height: 56px;
-    width: 160px;
-} */
-/* #main search-bar{
-    border: 8px;
-} */
 
 main{
     display: flex;
@@ -114,78 +103,65 @@ main{
     align-items: center;
 }
 
-#logo{
+#sec-logo{
     display: flex;
-
     height: calc(100vh - 560px);
-    width: 100%;
     align-items: flex-end;
-    justify-content: center;
-    /* border: 1px solid black; */
+    min-height: 150px;
+    max-height: 290px;
 }
-#logo img{
+
+#ico-search {
+    padding-right: 13px;
+    width: 33px;
+    height: 44px;
+    fill: #9aa0a6;
+}
+
+#ico-mic{
+    width: 44px;
+    height: 44px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+#search-form{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#second-wrapper{
+#form-input{
+    width: 100%;
+    max-width: 584px;
+    width: 100%;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 0 8px 0 14px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    height: 120px;
-    width: 100;
-    padding: 20px;
 }
 
-#search-bar{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 44px;
-    width: 582px;
-
-    border: 1px solid #2021247e;
-    border-radius: 9999px;
+#form-input:hover, 
+#form-input:focus-within{
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: transparent;
 }
 
-#search-bar > svg{
-    width: 24px;
-    height: 24px;
-}
-
-#search-bar>.input{
-    width: 483px;
-    height: 34px;
-    border: transparent;
-}
-
-#search-bar :first-child{
-    width: 44px;
-    height: 33px;
-    padding: -5px, 13px, 0, 0;
-}
-
-#search-bar :last-child{
-    width: 40px;
-    height: 44px;
-    padding: 0 8px;
+#form-input input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
 }
 
 #sec-buttons{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     padding-top: 18px;
-    height: 44px;
-    width: 582px;
-
- 
-    /* border: 1px solid yellow; */
 }
 
 #sec-buttons button{
     margin: 11px 4px;
-    padding: 0 15px;
+    padding: 0 16px;
     line-height: 27px;
     font-size: 14px;
     color: #3c4043;
@@ -197,16 +173,6 @@ main{
     height: 36px;
     border-radius: 4px;
 }
-
-/* #sec-buttons :first-child{
-    height: 36px;
-    width: 128px;
-}
-
-#sec-buttons :last-child{
-    height: 36px;
-    width: 142px;
-} */
 
 #sec-buttons button:hover{
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
@@ -221,10 +187,10 @@ main{
     outline: none;
 }
 
-#sec-language{
+#sec-lang{
     font-size: 13px;
 }
 
-#sec-language a{
+#sec-lang a{
     padding: 0 3px;
 }
