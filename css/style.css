@@ -242,3 +242,16 @@ footer{
     white-space: nowrap;
     color: #70757a;
 }
+
+/* Design aside */
+
+aside{
+
+    width: 318px;
+    position: fixed;
+    height: 438px;
+    background-color: red;
+    right: 10px;
+    top: 58px;
+    visibility: hidden;
+}
